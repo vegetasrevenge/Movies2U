@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Now-Playing</title>
+    <link rel="stylesheet" href="/style.css"/>
+</head>
+<body>
+
+    <nav>
+        <a href="/"><h2>Home</h2></a>
+        <a href="/medium-popular.html"><h2>Medium Popular</h2></a>
+    </nav>
+
+    <div id="container">
+        <div class="content" th:each= "movie : ${movies}">
+            <img width="150px" th:src="${'http://image.tmdb.org/t/p/original' + movie.posterPath}"/>
+            <span th:text="${movie.title}"></span>
+        </div>
+    </div>
+
+
+
+
+</body>
+</html>
